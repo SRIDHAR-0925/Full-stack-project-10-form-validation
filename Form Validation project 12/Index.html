@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="./Asset/css/Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        input::placeholder{
+            color: whitesmoke !important;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg_img">
+        <div>
+            <div class="row">
+                <div class="col-5">
+                    <div class="logo_box blur_box_2">
+                        <div class="join_div"> 
+                            <img src="./Asset/img/login_logo_1.png" height="" width="" style="margin-left:-60px ;" alt="">
+                            <img src="./Asset/img/form_logo_1.png" height="" width="" style="margin-top: -280px; margin-left: -90px;" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 " style="margin-top: 30px;">
+                    <div class="">
+                        <div class="row">
+                            <form class="crd_bord blur_box" id="myform" name="myform" onsubmit="validateform(event)">
+                            <div class="form_dflx">
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">First-Name :</label>
+                            <input type="text " name="fname" placeholder="Enter your First-Name" class="form-control txt_clr" style="width: 290px; background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="fname_err" ></p>
+                            </div>
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">Last-Name:</label>
+                            <input type="text " name="lname" placeholder="Enter your Last-Name" class="form-control txt_clr" style="width: 290px;  background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="lname_err"></p>
+                            </div>
+                            </div>
+                            <div class="form_dflx">
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">Mobile Number :</label>
+                            <input type="tel " name="num" placeholder="Enter your mobile number" class="form-control txt_clr" style="width: 290px;  background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="num_err"></p>
+                            </div>
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">Alt-Mobile Number :</label>
+                            <input type="tel " name="alnum" placeholder="Enter your Alt-mobile number" class="form-control txt_clr" style="width: 290px;  background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="alnum_err"></p>
+                            </div>
+                            </div>
+                            <div class="form_dflx">
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">E-mail :</label>
+                            <input type="text " name="mail" placeholder="Enter your Mail-ID" class="form-control txt_clr" style="width: 290px;  background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="mail_err"></p>
+                            </div>
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">Gender :</label>
+                            <input type="text " name="gender" placeholder="Enter your Gender" class="form-control txt_clr" style="width: 290px;  background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="gender_err"></p>
+                            </div>
+                            </div>
+                            <div class="form_dflx">
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">State :</label>
+                            <input type="text " name="state" placeholder="Enter your State" class="form-control txt_clr" style="width: 290px;  background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="state_err"></p>
+                            </div>
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">PIN-Code :</label>
+                            <input type="text " name="pin_cod" placeholder="Enter your PIN-code" class="form-control txt_clr" style="width: 290px;  background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="pin_cod_err"></p>
+                            </div>
+                            </div>
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">Addres :</label>
+                            <input type="text" name="add" placeholder="Enter your Addres" class="form-control txt_clr" style=" background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="add_err"></p>
+                            </div>
+                            <div class="trn_ani">
+                            <label for="" class="sub_heading lab_txt">Feedback :</label>
+                            <input type="text" name="feedback" id="feedback" placeholder="Enter your Feeedback" class="form-control txt_clr" style=" background: transparent; border: 1px solid whitesmoke;">
+                            <p class="text-danger" id="feedback_err"></p>
+                            </div><br>
+                            <div class="cent_btns">
+                            <button type="submit" class="btn trn_ani sub_btns">SUBMIT</button>
+                            </div>
+                        </form>
+                        <div>
+                            <div id="details_div" class="details_div" style="width: 700px; margin-top: -50px;">
+                                <div class="row" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">First-Name :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_fname"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="row" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">Last-Name :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_lname"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">Mobile Number :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_num" ></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                    <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">Alt-Mobile Number :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_alnum"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                    <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">E-mail :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_mail"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                    <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">Gender :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_gender"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                    <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">State :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_state"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                    <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">Pin_code :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_pin_cod"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">Address :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_add"></h5>
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <div class="row mt-3" style="height: 38px;">
+                                    <div class="col-3">
+                                        <label for="" class="det_lb">Feedback :</label>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5 id="det_feedback"></h5>
+                                    </div>
+                                </div>
+                                <button class="btn nxt_btns">NEXT-></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./Asset/js/Script.js" ></script>
+
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
