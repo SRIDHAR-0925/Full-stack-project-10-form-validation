@@ -1,1 +1,1 @@
-# Full-stack-project-10-form-validation
+I’ve successfully completed a comprehensive form hashtag#validation project within just 3 days using JavaScript, all without relying on external libraries or frameworks. This milestone underscores the exceptional hands-on training and industry-relevant experience I’m gaining here at Atozerv India Pvt Ltd💻.
